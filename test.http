@@ -1,0 +1,55 @@
+@API_URL = http://localhost:5500
+
+###
+
+POST http://localhost:5500/auth/register
+Content-Type: application/json
+
+{
+    "email":"tubelightboy056@gmail.com",
+    "name":"dev1",
+    "Dob":"30-10-2001",
+    "profileImgUrl":"helloworld",
+    "Github":"hai",
+      "devto": "devtoLink",
+      "medium":"medium link",
+      "skills":["js","python","java"],
+       "education":[{
+      "name": "school",
+      "year": "2001"
+    },{
+      "name": "school",
+      "year": "2001"
+    },{
+      "name": "school",
+      "year": "2001"
+    }],
+      "experience":[{
+          "companyName":"Cadra",
+          "duration": 3,
+          "position": "Backend",
+          "description": "hai"
+        },{
+          "companyName":"Cadra",
+          "duration": 3,
+          "position": "Backend",
+          "description": "hai"
+        },{
+          "companyName":"Cadra",
+          "duration": 3,
+          "position": "Backend"
+        }],
+        "Location":"12.000 13.0000"
+}
+
+###
+POST {{API_URL}}/auth/login
+Content-Type: application/json
+
+{
+    "email":"tubelightboy056@gmail.com"
+}
+
+###
+POST  {{API_URL}}/get/alldetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjcyOTQzODVjOTVmNDljZWY1ZWZjMyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjM5MzkzNjA0LCJleHAiOjE2Mzk1Mzc2MDR9.F6mgpFe1VFEuo3gY3EWBrEuKA1bCFBHjXe4ipJgxuJg
