@@ -4,7 +4,6 @@
 
 POST http://localhost:5500/auth/register
 Content-Type: application/json
-
 {
     "email":"tubelightboy056@gmail.com",
     "name":"dev1",
@@ -52,4 +51,13 @@ Content-Type: application/json
 
 ###
 POST  {{API_URL}}/get/alldetails
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjcyOTQzODVjOTVmNDljZWY1ZWZjMyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjM5MzkzNjA0LCJleHAiOjE2Mzk1Mzc2MDR9.F6mgpFe1VFEuo3gY3EWBrEuKA1bCFBHjXe4ipJgxuJg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjZkNGQ0MmVkNDFjMGI2NDcwYWRhZCIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ2ODE1MDM3LCJleHAiOjE2NDY5NTkwMzd9.UTsvzpLL4yWJQHMXHoVn-g_CT_H8qXPK-n4z5VC1zME
+
+###
+POST  {{API_URL}}/get/user/skills
+Authorization: Bearer 
+Content-Type: application/json
+
+{
+  "skills":["js"]
+}
