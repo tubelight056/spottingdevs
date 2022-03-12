@@ -55,7 +55,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjZkNGQ0M
 
 ###
 POST  {{API_URL}}/get/user/skills
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjZkNGQ0MmVkNDFjMGI2NDcwYWRhZCIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ2ODE1MDM3LCJleHAiOjE2NDY5NTkwMzd9.UTsvzpLL4yWJQHMXHoVn-g_CT_H8qXPK-n4z5VC1zME
 Content-Type: application/json
 
 {

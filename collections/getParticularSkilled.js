@@ -1,6 +1,6 @@
 const { User } = require("../models/User");
 
-exports.getParticularlySkilled = (req, res) => {
+exports.getParticularlySkilled = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
   console.log("[+] ", req.body);
   try {

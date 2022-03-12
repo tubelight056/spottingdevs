@@ -23,7 +23,8 @@ const userDetails = new mongoose.Schema({
   },
   Education: [
     {
-      Name: { type: String, required: true },
+      Degree: { type: String, required: true },
+      Institution: { type: String, required: true },
       StartYear: { type: Number, required: true },
       EndYear: { type: Number, required: true },
     },
