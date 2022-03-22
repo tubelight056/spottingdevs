@@ -10,19 +10,13 @@ Content-Type: application/json
     "Dob":"30-10-2001",
     "profileImgUrl":"helloworld",
     "Github":"hai",
-      "devto": "devtoLink",
-      "medium":"medium link",
-      "skills":["js","python","java"],
-       "education":[{
-      "name": "school",
-      "year": "2001"
-    },{
-      "name": "school",
-      "year": "2001"
-    },{
-      "name": "school",
-      "year": "2001"
-    }],
+    "devto": "devtoLink",
+    "medium":"medium link",
+    "skills":["js","python","java"],
+    "education":[{ "Degree": "BE",
+      "Institution":"CIT",
+      "StartYear": 2019,
+      "EndYear": 2023}],
       "experience":[{
           "companyName":"Cadra",
           "duration": 3,
