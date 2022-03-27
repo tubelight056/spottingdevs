@@ -8,6 +8,11 @@ const userDetails = new mongoose.Schema({
   Email: {
     type: String,
     require: true,
+    unique: true,
+  },
+  Password: {
+    type: String,
+    require: true,
   },
   DateOfBirth: {
     type: String,
@@ -42,6 +47,7 @@ const userDetails = new mongoose.Schema({
   },
   Github: {
     type: String,
+    required: true,
   },
   Devto: {
     type: String,

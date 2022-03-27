@@ -26,9 +26,10 @@ exports.register = async (req, res) => {
     if (req.body.education) {
       req.body.education.map((educations) => {
         education.push({
-          Name: educations.name,
-          EndYear: parseInt(educations.year),
-          StartYear: parseInt(educations.year),
+          Degree: educations.Degree,
+          Institution: educations.Institution,
+          EndYear: parseInt(educations.StartYear),
+          StartYear: parseInt(educations.EndYear),
         });
       });
     }
@@ -55,7 +56,7 @@ exports.register = async (req, res) => {
       ...(req.body.devto && { Devto: req.body.devto }),
       ...(req.body.medium && { Medium: req.body.medium }),
       Skills: req.body.skills,
-      Github: req.body.guthub,
+      Github: req.body.github,
       Education: [...education],
       Experience: [...experience],
       Location: req.body.location,

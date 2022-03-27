@@ -11,10 +11,11 @@ const port = process.env.PORT || 5500;
 
 const AuthRouter = require("./routers/authentication");
 const GetRouter = require("./routers/getDetails");
-
+const ProjectRouter = require("./routers/projects");
 mongoose.connect(process.env.API_URL).then(() => {
   App.use("/auth", AuthRouter);
   App.use("/get", GetRouter);
+  App.use("/project", ProjectRouter);
   App.listen(port, () => {
     console.log("[+] Server is listening on " + port);
   });

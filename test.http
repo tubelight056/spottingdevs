@@ -4,12 +4,13 @@
 
 POST http://localhost:5500/auth/register
 Content-Type: application/json
+
 {
     "email":"tubelightboy056@gmail.com",
     "name":"dev1",
     "Dob":"30-10-2001",
     "profileImgUrl":"helloworld",
-    "Github":"hai",
+    "github":"tubelight056",
     "devto": "devtoLink",
     "medium":"medium link",
     "skills":["js","python","java"],
@@ -45,7 +46,7 @@ Content-Type: application/json
 
 ###
 POST  {{API_URL}}/get/alldetails
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjZkNGQ0MmVkNDFjMGI2NDcwYWRhZCIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ2ODE1MDM3LCJleHAiOjE2NDY5NTkwMzd9.UTsvzpLL4yWJQHMXHoVn-g_CT_H8qXPK-n4z5VC1zME
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
 
 ###
 POST  {{API_URL}}/get/user/skills
@@ -54,4 +55,28 @@ Content-Type: application/json
 
 {
   "skills":["js"]
+}
+
+###
+POST  {{API_URL}}/project/user/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
+Content-Type: application/json
+
+{
+    "tags":[ "project" ],
+    "Github_id":384906199
+}
+
+###
+POST  {{API_URL}}/project/user/gitrepo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
+
+
+###
+POST  {{API_URL}}/project/user/search
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
+Content-Type: application/json
+
+{
+    "search":"My"
 }
