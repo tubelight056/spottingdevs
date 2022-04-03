@@ -10,10 +10,10 @@ const userDetails = new mongoose.Schema({
     require: true,
     unique: true,
   },
-  Password: {
-    type: String,
-    require: true,
-  },
+  // Password: {
+  //   type: String,
+  //   require: true,
+  // },
   DateOfBirth: {
     type: String,
     require: true,

@@ -17,7 +17,7 @@ exports.login = async (req, res) => {
       status: false,
     });
   } else {
-    await User.find(
+    await User.findOne(
       { Email: req.body.email },
       "_id Name Email",
       async (err, result) => {
@@ -33,11 +33,21 @@ exports.login = async (req, res) => {
             status: false,
           });
         } else {
-          if (result !== null) {
+          if (result === null) {
+            console.log(`[-]  `, {
+              statusMessage: "No account founded",
+              status: false,
+            });
+            res.send({
+              statusMessage: "no account founded",
+              status: false,
+            });
+          } else {
+            console.log(result);
             const data = {
-              id: result[0]._id,
-              Name: result[0].Name,
-              Email: result[0].Email,
+              id: result._id,
+              Name: result.Name,
+              Email: result.Email,
             };
             await jwt.sign(
               data,
@@ -49,22 +59,13 @@ exports.login = async (req, res) => {
                   status: true,
                 });
                 res.send({
-                  name: result[0].Name,
-                  email: result[0].Email,
+                  name: result.Name,
+                  email: result.Email,
                   token: token,
                   status: true,
                 });
               }
             );
-          } else {
-            console.log(`[-]  `, {
-              statusMessage: "No account founded",
-              status: false,
-            });
-            res.send({
-              statusMessage: "no account founded",
-              status: false,
-            });
           }
         }
       }

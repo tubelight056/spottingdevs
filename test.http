@@ -6,7 +6,7 @@ POST http://localhost:5500/auth/register
 Content-Type: application/json
 
 {
-    "email":"tubelightboy056@gmail.com",
+    "email":"santhoshm2504@gmail.com",
     "name":"dev1",
     "Dob":"30-10-2001",
     "profileImgUrl":"helloworld",
@@ -41,7 +41,7 @@ POST {{API_URL}}/auth/login
 Content-Type: application/json
 
 {
-    "email":"tubelightboy056@gmail.com"
+    "email":"viratsando@gmail.com"
 }
 
 ###
@@ -79,4 +79,12 @@ Content-Type: application/json
 
 {
     "search":"My"
+}
+
+###
+POST  {{API_URL}}/get/user/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4Njk1NDExLCJleHAiOjE2NDg4Mzk0MTF9.DnlHIuh_sTK5d8OVochrQTIkiLcl-YE31GzNe0JK164
+Content-Type: application/json
+
+{
 }
