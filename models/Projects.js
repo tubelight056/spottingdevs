@@ -10,6 +10,7 @@ const projectDetails = new mongoose.Schema({
   },
   Github_id: {
     type: Number,
+    unique: true,
     require: true,
   },
   Name: {

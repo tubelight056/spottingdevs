@@ -72,6 +72,7 @@ POST  {{API_URL}}/project/user/gitrepo
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
 
 
+
 ###
 POST  {{API_URL}}/project/user/search
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
@@ -87,4 +88,30 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyY
 Content-Type: application/json
 
 {
+}
+
+###
+
+POST  {{API_URL}}/blog/user/devto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
+
+
+###
+
+POST  {{API_URL}}/blog/user/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
+Content-Type: application/json
+
+{
+    "Blog_id":1045920
+}
+
+###
+
+POST  {{API_URL}}/blog/user/search
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
+Content-Type: application/json
+
+{
+    "search":"My"
 }
