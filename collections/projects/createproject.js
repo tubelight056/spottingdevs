@@ -37,6 +37,7 @@ exports.createProjects = async (req, res) => {
             response.data.forEach((element) => {
               if (element.id === req.body.Github_id) {
                 data = {
+                  userId: req.body.tokenId,
                   Email: req.body.tokenEmail,
                   Github_id: element.id,
                   Name: element.name,

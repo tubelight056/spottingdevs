@@ -1,8 +1,10 @@
 const { Blog } = require("../../models/Blogs");
+const { updateALLBlogs } = require("../allUpdateBlogs");
 
 exports.getBlogssByFilter = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
   console.log("[+] ", req.body);
+
   await Blog.find(
     { Title: { $regex: `${req.body.search}+[a-z]*`, $options: "ig" } },
     async (error, result) => {

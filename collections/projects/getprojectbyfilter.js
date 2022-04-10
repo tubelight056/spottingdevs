@@ -1,8 +1,10 @@
 const { Project } = require("../../models/Projects");
+const { updateALLProjects } = require("../AllUpdateProjects");
 
 exports.getProjectsByFilter = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
   console.log("[+] ", req.body);
+
   await Project.find(
     { name: { $regex: `${req.body.search}+[a-z]*`, $options: "ig" } },
     async (error, result) => {
@@ -26,5 +28,5 @@ exports.getProjectsByFilter = async (req, res) => {
         });
       }
     }
-  );
+  ).clone();
 };

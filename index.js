@@ -13,6 +13,9 @@ const AuthRouter = require("./routers/authentication");
 const GetRouter = require("./routers/getDetails");
 const ProjectRouter = require("./routers/projects");
 const BlogRouter = require("./routers/blogs");
+const { updateALLProjects } = require("./collections/AllUpdateProjects");
+const { updateALLBlogs } = require("./collections/allUpdateBlogs");
+
 mongoose.connect(process.env.API_URL).then(() => {
   App.use("/auth", AuthRouter);
   App.use("/get", GetRouter);
@@ -21,4 +24,6 @@ mongoose.connect(process.env.API_URL).then(() => {
   App.listen(port, () => {
     console.log("[+] Server is listening on " + port);
   });
+  updateALLProjects();
+  updateALLBlogs();
 });
