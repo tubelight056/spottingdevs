@@ -37,6 +37,7 @@ Content-Type: application/json
 }
 
 ###
+
 POST {{API_URL}}/auth/login
 Content-Type: application/json
 
@@ -114,4 +115,22 @@ Content-Type: application/json
 
 {
     "search":"My"
+}
+
+###
+POST  {{API_URL}}/get/score
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY1MDEyOTE2OSwiZXhwIjoxNjUwMjczMTY5fQ._vbdqerECAytpexIWRY2G2iVuElsX5g3c--psVkX8w4
+Content-Type: application/json
+
+{
+  "id":"62483837cefdf358826d9eae"
+}
+
+###
+POST  {{API_URL}}/get/user/detail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY1MDEyOTE2OSwiZXhwIjoxNjUwMjczMTY5fQ._vbdqerECAytpexIWRY2G2iVuElsX5g3c--psVkX8w4
+Content-Type: application/json
+
+{
+  "id":"62483837cefdf358826d9eae"
 }

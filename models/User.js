@@ -58,6 +58,10 @@ const userDetails = new mongoose.Schema({
   Location: {
     type: String,
   },
+  Visited: {
+    type: Array,
+    default: [],
+  },
 });
 
 const User = mongoose.model("User", userDetails);
