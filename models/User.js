@@ -21,6 +21,8 @@ const userDetails = new mongoose.Schema({
   profileImgUrl: {
     type: String,
     require: true,
+    default:
+      "https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar-600x600.png",
   },
   Skills: {
     type: Array,
