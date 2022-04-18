@@ -1,5 +1,4 @@
 const { Project } = require("../../models/Projects");
-const { updateALLProjects } = require("../AllUpdateProjects");
 
 exports.getProjectsByFilter = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
