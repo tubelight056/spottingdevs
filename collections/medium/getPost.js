@@ -18,16 +18,22 @@ exports.GetMediumPost = async (req, res) => {
         status: false,
       });
     } else {
-      console.log(userResult);
-      medium.profile.getRecentPosts(userResult.Medium).then((result) => {
-        console.log(result);
-        res.send("hai");
-      });
-
       if (userResult !== null) {
-        medium.profile.getRecentPosts(userResult.Medium).then((result) => {
-          console.log(result);
-          res.send("hai");
+        medium.profile
+          .getRecentPosts(userResult.Medium)
+          .then(async (result) => {
+            await res.send({ result, status: true });
+          });
+      } else {
+        console.log(`[-]  `, {
+          error: err,
+          statusMessage: "No user like that",
+          status: false,
+        });
+        res.send({
+          error: err,
+          statusMessage: "No account founded",
+          status: false,
         });
       }
     }
