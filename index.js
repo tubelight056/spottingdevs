@@ -15,6 +15,7 @@ const ProjectRouter = require("./routers/projects");
 const BlogRouter = require("./routers/blogs");
 const { updateALLProjects } = require("./collections/AllUpdateProjects");
 const { updateALLBlogs } = require("./collections/allUpdateBlogs");
+const { GetMediumPost } = require("./collections/medium/getPost");
 
 mongoose.connect(process.env.API_URL).then(() => {
   App.use("/auth", AuthRouter);

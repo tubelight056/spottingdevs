@@ -10,10 +10,7 @@ const userDetails = new mongoose.Schema({
     require: true,
     unique: true,
   },
-  // Password: {
-  //   type: String,
-  //   require: true,
-  // },
+
   DateOfBirth: {
     type: String,
     require: true,
@@ -63,6 +60,28 @@ const userDetails = new mongoose.Schema({
   Visited: {
     type: Array,
     default: [],
+  },
+  Score: {
+    blogscore: {
+      type: Number,
+      default: 0,
+    },
+    blogCount: {
+      type: Number,
+      default: 0,
+    },
+    projectscore: {
+      type: Number,
+      default: 0,
+    },
+    projectCount: {
+      type: Number,
+      default: 0,
+    },
+    score: {
+      type: Number,
+      default: 0,
+    },
   },
 });
 

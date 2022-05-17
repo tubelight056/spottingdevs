@@ -1,6 +1,7 @@
 const { Blog } = require("../../models/Blogs");
 require("dotenv").config();
 const axios = require("axios");
+const { score } = require("../scoreCalculator");
 exports.createBlogs = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
   console.log("[+] ", req.body);
@@ -35,6 +36,7 @@ exports.createBlogs = async (req, res) => {
           newBlog
             .save()
             .then((data) => {
+              score(req.body.tokenId);
               console.log(`[+]  `, {
                 statusMessage: "registered successfully",
                 status: true,

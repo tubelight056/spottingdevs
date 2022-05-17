@@ -2,6 +2,8 @@ const { User } = require("../../models/User");
 const { Project } = require("../../models/Projects");
 require("dotenv").config();
 const axios = require("axios");
+const { score } = require("../scoreCalculator");
+
 exports.createProjects = async (req, res) => {
   console.log("\n[+]  request", req.method, req.originalUrl);
   console.log("[+] ", req.body);
@@ -63,10 +65,10 @@ exports.createProjects = async (req, res) => {
               });
             } else {
               const newProject = new Project(data);
-
               newProject
                 .save()
                 .then((data) => {
+                  score(req.body.tokenId);
                   console.log(`[+]  `, {
                     statusMessage: "registered successfully",
                     status: true,

@@ -9,10 +9,10 @@ Content-Type: application/json
     "email":"santhshm2504@gmail.com",
     "name":"dev1",
     "Dob":"30-10-2001",
-    "profileImgUrl":"helloworld",
+    "profileImgUrl":"https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar-600x600.png",
     "github":"tubelight056",
     "devto": "devtoLink",
-    "medium":"medium link",
+    "medium":"santhoshm25",
     "skills":["js","python","java"],
     "education":[{ "Degree": "BE",
       "Institution":"CIT",
@@ -42,13 +42,12 @@ POST {{API_URL}}/auth/login
 Content-Type: application/json
 
 {
-    "email":"viratsando@gmail.com"
+    "email":"santhshm2504@gmail.com"
 }
 
 ###
 POST  {{API_URL}}/get/alldetails
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 ###
 POST  {{API_URL}}/get/user/skills
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYjZkNGQ0MmVkNDFjMGI2NDcwYWRhZCIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ2ODE1MDM3LCJleHAiOjE2NDY5NTkwMzd9.UTsvzpLL4yWJQHMXHoVn-g_CT_H8qXPK-n4z5VC1zME
@@ -60,20 +59,17 @@ Content-Type: application/json
 
 ###
 POST  {{API_URL}}/project/user/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTU2ODU2NSwiZXhwIjoxNjQ5NzEyNTY1fQ.jHWqNKmgTFzPpvf5lPXiLUx66OBy4jY31RPvn20YR7k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 Content-Type: application/json
 
 {
     "tags":[ "project" ],
-    "Github_id":384906199
+    "Github_id":387179565
 }
 
 ###
 POST  {{API_URL}}/project/user/gitrepo
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjQ4MzA3MDMxLCJleHAiOjE2NDg0NTEwMzF9.qU6TaVMu_GDzjsBofgVE4eRDRYHx9-6HOdXakZwLQ50
-
-
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 ###
 POST  {{API_URL}}/project/user/search
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
@@ -85,7 +81,7 @@ Content-Type: application/json
 
 ### 
 POST  {{API_URL}}/get/user/all
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY1MDEyOTE2OSwiZXhwIjoxNjUwMjczMTY5fQ._vbdqerECAytpexIWRY2G2iVuElsX5g3c--psVkX8w4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 Content-Type: application/json
 
 {
@@ -95,17 +91,15 @@ Content-Type: application/json
 ###
 
 POST  {{API_URL}}/blog/user/devto
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
-
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 ###
 
 POST  {{API_URL}}/blog/user/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY0OTQ4MTc2NiwiZXhwIjoxNjQ5NjI1NzY2fQ.JVgm2XZ3Au9PTC94DDG1sCt1a54h-yHTGzecMhzi0TM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 Content-Type: application/json
 
 {
-    "Blog_id":1045920
+    "Blog_id":1074422
 }
 
 ###
@@ -120,18 +114,28 @@ Content-Type: application/json
 
 ###
 POST  {{API_URL}}/get/score
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY1MDEyOTE2OSwiZXhwIjoxNjUwMjczMTY5fQ._vbdqerECAytpexIWRY2G2iVuElsX5g3c--psVkX8w4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzE5MDg3LCJleHAiOjE2NTI4NjMwODd9.viBle7CYTn8UBAMSZwfcMMng2yM21fe1LV1dqsua1d0
+Content-Type: application/json
+
+{
+  "id":"6282642214a9a59cd63243c6"
+}
+
+###
+POST  {{API_URL}}/get/user/detail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjUyNjk1OTAwLCJleHAiOjE2NTI4Mzk5MDB9.uU7dAD7DFoocjcxuRN_zsszwCRFmgQzB_Kz_7AQ3L1E
 Content-Type: application/json
 
 {
   "id":"62483837cefdf358826d9eae"
 }
 
+
 ###
-POST  {{API_URL}}/get/user/detail
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDgzODM3Y2VmZGYzNTg4MjZkOWVhZSIsIk5hbWUiOiJkZXYyIiwiRW1haWwiOiJ2aXJhdHNhbmRvQGdtYWlsLmNvbSIsImlhdCI6MTY1MDEyOTE2OSwiZXhwIjoxNjUwMjczMTY5fQ._vbdqerECAytpexIWRY2G2iVuElsX5g3c--psVkX8w4
+POST  {{API_URL}}/blog/user/medium/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyM2YyYWYyYTA0NDc1ZDQzZDhhYzlmYyIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJ0dWJlbGlnaHRib3kwNTZAZ21haWwuY29tIiwiaWF0IjoxNjUyNjk1OTAwLCJleHAiOjE2NTI4Mzk5MDB9.uU7dAD7DFoocjcxuRN_zsszwCRFmgQzB_Kz_7AQ3L1E
 Content-Type: application/json
 
 {
-  "id":"62483837cefdf358826d9eae"
+  
 }

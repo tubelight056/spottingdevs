@@ -2,7 +2,6 @@ const { User } = require("../models/User");
 const { Project } = require("../models/Projects");
 const { Blog } = require("../models/Blogs");
 const axios = require("axios");
-const { score } = require("./scoreCalculator");
 
 require("dotenv").config();
 
@@ -11,7 +10,7 @@ exports.getUserDetail = async (req, res) => {
   console.log("[+] ", req.body);
   await User.findOne(
     { _id: req.body.id },
-    " Name Email DateOfBirth profileImgUrl Skills Education Experience Portfolio Github Devto Medium Visited",
+    { Password: 0 },
     async (err, result) => {
       if (err) {
         console.log(`[-]  `, {
@@ -92,55 +91,36 @@ exports.getUserDetail = async (req, res) => {
               }
               findProject.then((projectResult) => {
                 findBlogs.then((blogResult) => {
-                  score(req.body.id)
-                    .then((data) => {
-                      const { Visited, ...userResult } = result;
-                      console.log({
-                        data: userResult,
-                        blog: blogResult,
-                        projects: projectResult,
-                        githubData,
-                        status: true,
-                        score: data,
-                      });
-                      res.send({
-                        data: result,
-                        blog: blogResult,
-                        projects: projectResult,
-                        githubData,
-                        status: true,
-                        score: data,
-                      });
-                    })
-                    .catch((error) => {
-                      console.log({
-                        data: userResult,
-                        blog: blogResult,
-                        projects: projectResult,
-                        githubData,
-                        status: true,
-                      });
-                      res.send({
-                        data: result,
-                        blog: blogResult,
-                        projects: projectResult,
-                        githubData,
-                        status: true,
-                      });
-                    });
+                  const { Visited, ...userResult } = result;
+                  result.userVisited = Visited.length();
+                  console.log({
+                    data: userResult,
+                    blog: blogResult,
+                    projects: projectResult,
+                    githubData,
+                    status: true,
+                    score: data,
+                  });
+                  res.send({
+                    data: result,
+                    blog: blogResult,
+                    projects: projectResult,
+                    githubData,
+                    status: true,
+                    score: data,
+                  });
                 });
               });
             })
 
             .catch((error) => {
               console.log({
-                data: result[0],
-                projects: projectresult,
+                error,
+                data: result,
                 status: true,
               });
               res.send({
-                data: result[0],
-                projects: projectresult,
+                data: result,
                 status: true,
               });
             });

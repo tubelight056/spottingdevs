@@ -1,6 +1,8 @@
 const { User } = require("../models/User");
 const jwt = require("jsonwebtoken");
 const { GetParticularlyScore } = require("./ParticularScore");
+const { score } = require("./scoreCalculator");
+
 require("dotenv").config();
 
 exports.login = async (req, res) => {
@@ -45,7 +47,7 @@ exports.login = async (req, res) => {
             });
           } else {
             console.log(result);
-
+            score(result._id);
             const data = {
               id: result._id,
               Name: result.Name,

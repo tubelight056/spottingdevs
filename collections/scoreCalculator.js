@@ -50,8 +50,9 @@ exports.score = (id) => {
                 });
               } else {
                 projectResult.forEach((element) => {
+                  // console.log(eachProjectScore);
                   eachProjectScore =
-                    eachProjectScore + element.Stargazers_count;
+                    eachProjectScore + parseInt(element.Stargazers_count);
                   projectCount = projectCount + 1;
                 });
               }
@@ -74,29 +75,45 @@ exports.score = (id) => {
                 });
               } else {
                 blogResult.forEach((element) => {
-                  eachBlogScore = eachBlogScore + element.positive_count;
+                  // console.log(eachBlogScore);
+                  eachBlogScore =
+                    eachBlogScore + parseInt(element.positive_count);
                   blogCount = blogCount + 1;
                 });
               }
             }
           );
           setTimeout(() => {
-            console.log({
-              status: true,
-              blogscore: eachBlogScore / blogCount,
-              blogCount,
-              projectscore: eachProjectScore / projectCount,
-              projectCount,
-              userVisited: userResult.Visited.length,
-            });
-            resolve({
-              status: true,
-              blogscore: eachBlogScore / blogCount,
-              blogCount,
-              projectscore: eachProjectScore / projectCount,
-              projectCount,
-              userVisited: userResult.Visited.length,
-            });
+            console.log(id);
+            User.updateOne(
+              { _id: id },
+              {
+                Score: {
+                  blogscore: eachBlogScore,
+                  blogCount: blogCount,
+                  projectscore: eachProjectScore,
+                  projectCount: projectCount,
+                  score:
+                    (eachBlogScore + eachProjectScore) /
+                    (blogCount + projectCount),
+                },
+              },
+              (err, result) => {
+                if (!err) {
+                  resolve({
+                    score: {
+                      blogscore: eachBlogScore,
+                      blogCount: blogCount,
+                      projectscore: eachProjectScore,
+                      projectCount: projectCount,
+                      score:
+                        (eachBlogScore + eachProjectScore) /
+                        (blogCount + projectCount),
+                    },
+                  });
+                }
+              }
+            );
           }, [2000]);
         }
       }).clone();
