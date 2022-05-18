@@ -55,7 +55,9 @@ const userDetails = new mongoose.Schema({
     type: String,
   },
   Location: {
-    type: String,
+    type: Array,
+    default: [0, 0],
+    required: true,
   },
   Visited: {
     type: Array,
