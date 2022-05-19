@@ -15,13 +15,14 @@ const ProjectRouter = require("./routers/projects");
 const BlogRouter = require("./routers/blogs");
 const { updateALLProjects } = require("./collections/AllUpdateProjects");
 const { updateALLBlogs } = require("./collections/allUpdateBlogs");
-const { GetMediumPost } = require("./collections/medium/getPost");
+const updateRouter = require("./routers/update");
 
 mongoose.connect(process.env.API_URL).then(() => {
   App.use("/auth", AuthRouter);
   App.use("/get", GetRouter);
   App.use("/project", ProjectRouter);
   App.use("/blog", BlogRouter);
+  App.use("/update", updateRouter);
   App.listen(port, () => {
     console.log("[+] Server is listening on " + port);
   });

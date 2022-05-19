@@ -9,7 +9,7 @@ exports.getDetails = async (req, res) => {
   console.log("[+] ", req.body);
   await User.find(
     { _id: req.body.tokenId },
-    " Name Email DateOfBirth profileImgUrl Skills Education Experience Portfolio Github Devto Medium",
+    { Password: 0 },
     async (err, result) => {
       if (err) {
         console.log(`[-]  `, {
@@ -67,7 +67,7 @@ exports.getDetails = async (req, res) => {
                     });
                   })
                   .catch((error) => {
-                    console.log(error, "s");
+                    console.log(error);
                     console.log({
                       data: result[0],
                       projects: projectresult,

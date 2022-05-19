@@ -85,6 +85,10 @@ const userDetails = new mongoose.Schema({
       default: 0,
     },
   },
+  status: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const User = mongoose.model("User", userDetails);

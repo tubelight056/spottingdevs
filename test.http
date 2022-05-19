@@ -148,3 +148,12 @@ Content-Type: application/json
 {
   "location":[13.000,14.0000]
 }
+
+### 
+POST  {{API_URL}}/update/user/detail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyOTM0MjUzLCJleHAiOjE2NTMwNzgyNTN9.8PFXiE_U42Aga9dademrCQL0tPo2iRYUKlsDXSUeMmk
+Content-Type: application/json
+
+{
+  "Location":[13.000,14.0000]
+}
