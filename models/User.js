@@ -27,17 +27,17 @@ const userDetails = new mongoose.Schema({
   },
   Education: [
     {
-      Degree: { type: String, required: true },
-      Institution: { type: String, required: true },
-      StartYear: { type: Number, required: true },
-      EndYear: { type: Number, required: true },
+      Degree: { type: String },
+      Institution: { type: String },
+      StartYear: { type: Number },
+      EndYear: { type: Number },
     },
   ],
   Experience: [
     {
-      CompanyName: { type: String, required: true },
-      Duration: { type: Number, required: true },
-      Position: { type: String, required: true },
+      CompanyName: { type: String },
+      Duration: { type: Number },
+      Position: { type: String },
       Description: { type: String },
     },
   ],
@@ -50,9 +50,11 @@ const userDetails = new mongoose.Schema({
   },
   Devto: {
     type: String,
+    default: "Nothing",
   },
   Medium: {
     type: String,
+    default: "Nothing",
   },
   Location: {
     type: Array,

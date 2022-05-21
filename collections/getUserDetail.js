@@ -92,14 +92,13 @@ exports.getUserDetail = async (req, res) => {
               findProject.then((projectResult) => {
                 findBlogs.then((blogResult) => {
                   const { Visited, ...userResult } = result;
-                  result.userVisited = Visited.length();
+                  result.userVisited = result.Visited.length;
                   console.log({
                     data: userResult,
                     blog: blogResult,
                     projects: projectResult,
                     githubData,
                     status: true,
-                    score: data,
                   });
                   res.send({
                     data: result,
@@ -107,7 +106,6 @@ exports.getUserDetail = async (req, res) => {
                     projects: projectResult,
                     githubData,
                     status: true,
-                    score: data,
                   });
                 });
               });
