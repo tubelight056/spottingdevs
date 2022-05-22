@@ -91,7 +91,7 @@ exports.getUserDetail = async (req, res) => {
               }
               findProject.then((projectResult) => {
                 findBlogs.then((blogResult) => {
-                  const { Visited, ...userResult } = result;
+                  const { Visited, ...userResult } = result._doc;
                   result.userVisited = result.Visited.length;
                   console.log({
                     data: userResult,
