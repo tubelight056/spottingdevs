@@ -12,7 +12,7 @@ const Router = express.Router();
 
 Router.post("/alldetails", verifyToken, getDetails);
 Router.post("/user/skills", verifyToken, getParticularlySkilled);
-Router.post("/user/all", verifyToken, getAllUser);
+Router.post("/user/search", verifyToken, getAllUser);
 Router.post("/score", verifyToken, GetParticularlyScore);
 Router.post("/user/detail", verifyToken, getUserDetail);
 Router.post("/user/location", verifyToken, getAllUserByLocation);

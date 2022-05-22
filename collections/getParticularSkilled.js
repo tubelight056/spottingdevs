@@ -16,6 +16,7 @@ exports.getParticularlySkilled = async (req, res) => {
     }
     await User.find(
       { Skills: { $in: [...req.body.skills] } },
+      { Password: 0, Visited: 0 },
       async (err, result) => {
         if (err) {
           console.log(`[-]  `, {

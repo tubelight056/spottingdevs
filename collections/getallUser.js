@@ -9,7 +9,7 @@ exports.getAllUser = async (req, res) => {
   const query =
     req.body.search === undefined
       ? {}
-      : { Name: { $regex: `${req.body.search}+[a-z]*`, $options: "ig" } };
+      : { Name: { $regex: `(?=.*${req.body.search})`, $options: "ig" } };
   await User.find(query, { Password: 0, Visited: 0 }, async (err, result) => {
     if (err) {
       console.log(`[-]  `, {

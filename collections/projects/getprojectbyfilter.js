@@ -5,7 +5,7 @@ exports.getProjectsByFilter = async (req, res) => {
   console.log("[+] ", req.body);
 
   await Project.find(
-    { name: { $regex: `${req.body.search}+[a-z]*`, $options: "ig" } },
+    { name: { $regex: `(?=.*${req.body.search})`, $options: "ig" } },
     async (error, result) => {
       if (error) {
         console.log({

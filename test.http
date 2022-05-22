@@ -80,7 +80,7 @@ Content-Type: application/json
 }
 
 ### 
-POST  {{API_URL}}/get/user/all
+POST  {{API_URL}}/user/user/search
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyNzEyNDgyLCJleHAiOjE2NTI4NTY0ODJ9.V3gSOC9FhOlP3Qhj5LsxLZV-UJnxQU_6vzh1vmglbjk
 Content-Type: application/json
 
@@ -133,7 +133,7 @@ Content-Type: application/json
 
 ###
 POST  {{API_URL}}/blog/user/medium/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUyODAzNDIxLCJleHAiOjE2NTI5NDc0MjF9.Wj3wnGBapf4CB9fdU5IllgZs69ngmyhtw9brzNBcQtk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODI2NDIyMTRhOWE1OWNkNjMyNDNjNiIsIk5hbWUiOiJkZXYxIiwiRW1haWwiOiJzYW50aHNobTI1MDRAZ21haWwuY29tIiwiaWF0IjoxNjUzMjIyNzkyLCJleHAiOjE2NTMzNjY3OTJ9.yFh4sPxgaY308zZtAoBOKA_CRNzdoqNDtdtX46wuG00
 Content-Type: application/json
 
 {

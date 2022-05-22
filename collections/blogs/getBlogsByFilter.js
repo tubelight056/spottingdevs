@@ -6,7 +6,7 @@ exports.getBlogssByFilter = async (req, res) => {
   console.log("[+] ", req.body);
 
   await Blog.find(
-    { Title: { $regex: `${req.body.search}+[a-z]*`, $options: "ig" } },
+    { Title: { $regex: `(?=.*${req.body.search})`, $options: "ig" } },
     async (error, result) => {
       if (error) {
         console.log({

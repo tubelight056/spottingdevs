@@ -93,20 +93,22 @@ exports.getUserDetail = async (req, res) => {
                 findBlogs.then((blogResult) => {
                   const { Visited, ...userResult } = result._doc;
                   result.userVisited = result.Visited.length;
-                  console.log({
-                    data: userResult,
-                    blog: blogResult,
-                    projects: projectResult,
-                    githubData,
-                    status: true,
-                  });
-                  res.send({
-                    data: result,
-                    blog: blogResult,
-                    projects: projectResult,
-                    githubData,
-                    status: true,
-                  });
+                  setTimeout(() => {
+                    console.log({
+                      data: userResult,
+                      blog: blogResult,
+                      projects: projectResult,
+                      githubData,
+                      status: true,
+                    });
+                    res.send({
+                      data: result,
+                      blog: blogResult,
+                      projects: projectResult,
+                      githubData,
+                      status: true,
+                    });
+                  }, [1000]);
                 });
               });
             })

@@ -10,5 +10,6 @@ const Router = express.Router();
 Router.post("/user/create", verifyToken, createProjects);
 Router.post("/user/gitrepo", verifyToken, getProjects);
 Router.post("/user/search", verifyToken, getProjectsByFilter);
+Router.post("/user/remove", verifyToken, getProjectsByFilter);
 
 module.exports = Router;
