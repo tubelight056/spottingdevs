@@ -5,7 +5,7 @@ exports.getProjectsByFilter = async (req, res) => {
   console.log("[+] ", req.body);
 
   await Project.find(
-    { name: { $regex: `(?=.*${req.body.search})`, $options: "ig" } },
+    { name: { $regex: `${req.body.search}` } },
     async (error, result) => {
       if (error) {
         console.log({
@@ -27,5 +27,7 @@ exports.getProjectsByFilter = async (req, res) => {
         });
       }
     }
-  ).clone();
+  )
+    .limit(10)
+    .clone();
 };
