@@ -72,7 +72,6 @@ exports.getAllUserByLocation = async (req, res) => {
             status: true,
           });
         });
-        // setTimeout(() => {}, [5000]);
       } else {
         console.log(`[-]  `, {
           statusMessage: "No account founded",

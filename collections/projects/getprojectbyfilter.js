@@ -17,6 +17,9 @@ exports.getProjectsByFilter = async (req, res) => {
           status: false,
         });
       } else {
+        if (req.body.search != undefined) {
+          result = result.filter((s) => s.Name.includes(req.body.search));
+        }
         console.log({
           data: result,
           status: true,

@@ -50,7 +50,6 @@ exports.score = (id) => {
                 });
               } else {
                 projectResult.forEach((element) => {
-                  // console.log(eachProjectScore);
                   eachProjectScore =
                     eachProjectScore + parseInt(element.Stargazers_count);
                   projectCount = projectCount + 1;
@@ -75,7 +74,6 @@ exports.score = (id) => {
                 });
               } else {
                 blogResult.forEach((element) => {
-                  // console.log(eachBlogScore);
                   eachBlogScore =
                     eachBlogScore + parseInt(element.positive_count);
                   blogCount = blogCount + 1;

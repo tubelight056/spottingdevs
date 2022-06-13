@@ -38,6 +38,9 @@ exports.getAllUser = async (req, res) => {
         //   });
         //   resolve(fullDetails);
         // });
+        if (req.body.search != undefined) {
+          result = result.filter((s) => s.Name.includes(req.body.search));
+        }
         setTimeout(() => {
           console.log(result);
           res.send({
